@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html ng-app="githubViewer">
+
+  <head>
+    <script data-require="angularjs@1.4.9" data-semver="1.4.9" src="https://code.angularjs.org/1.4.9/angular.min.js"></script>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js"></script>
+  </head>
+
+  <body ng-controller="MainController">
+    <h1>{{message}}</h1>
+    <div>{{error}}</div>
+      
+      <form name="searchUser" ng-submit="search(username)" >
+          <input type="search" required placeholder="Username" ng-model="username" />
+          <input type="submit" value="Search"  />
+      </form>
+      <div>
+          <h2>{{user.name}}</h2>
+          <img src="{{user.avatar_url}}" title="{{user.name}}" />
+      </div>
+   
+  </body>
+
+</html>
