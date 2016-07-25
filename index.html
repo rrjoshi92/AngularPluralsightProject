@@ -1,44 +1,65 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html ng-app="githubViewer">
-
 <head>
-    <script data-require="angularjs@1.4.9" data-semver="1.4.9" src="https://code.angularjs.org/1.4.9/angular.min.js"></script>
-    <script src="script.js"></script>
+    <title>Github Viewer</title>
+	<meta charset="utf-8" />
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.10.0/css/bootstrap-select.min.css">  
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/main.css" rel="stylesheet" />
+    <link rel=”shortcut icon” href=”/favicon.ico” type=”image/x-icon” />
+    <base href="/" />
 </head>
+<body>
 
-<body ng-controller="MainController">
-    <h1>{{message}}</h1>
-    <div>{{error}}</div>
-    <form name="searchUser" ng-submit="search(username)">
-        <input type="search" required placeholder="Username" ng-model="username" />
-        <input type="submit" value="Search" />
-    </form>
-    {{countdown}}
-    <div ng-show="user">
-        <h2>{{user.name}}</h2>
-        <img src="{{user.avatar_url}}" title="{{user.name}}" />
-        <br />
-       
-        Order:
-        <select ng-model="repoSortOrder">
-            <option value="+name">Name</option>
-            <option value="-stargazers_count">Stars</option>
-            <option value="+language">Language</option>
-        </select>
+     <!--navbar started-->
+    <div class="container">
+        <nav class="navbar navbar-inverse">
+            <div class="container-fluid">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="home">Github-Viewer</a>
+                </div>
+
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a href="home">Home<span class="sr-only">(current)</span></a></li>
+                        <li><a href="404">Portfolio</a></li>                        
+                    </ul>
+                </div><!-- /.navbar-collapse -->
+            </div><!-- /.container-fluid -->
+        </nav>
     </div>
-    <table ng-show="user">
-        <thead>
-        <th>Name</th>
-        <th>Stars</th>
-        <th>Language</th>
-        </thead>
-        <tbody>
-            <tr ng-repeat="repo in repos |  orderBy:repoSortOrder">
-                <td>{{repo.name}}</td>
-                <td>{{repo.stargazers_count|number}}</td>
-                <td>{{repo.language}}</td>
-            </tr>
-        </tbody>
-    </table>
+    <!--navbar END-->
+    
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="main-container" ng-view></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.10.0/js/bootstrap-select.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+    <script data-require="angularjs@1.4.9" data-semver="1.4.9" src="https://code.angularjs.org/1.4.9/angular.min.js"></script>
+    <script src="js/angular-route.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/github.js"></script>
+    <script src="js/maincontroller.js"></script>
+    <script src="js/userdetails.js"></script>
 </body>
 </html>
