@@ -31,7 +31,7 @@
         .otherwise({
             redirectTo: "/angularProject/error"
         });
-
+         
     });
  
    
