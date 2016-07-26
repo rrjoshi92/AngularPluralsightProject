@@ -7,23 +7,23 @@
     app.config(function ($routeProvider, $locationProvider) {
         $locationProvider.html5Mode(true);
         $routeProvider
-                .when("/angulerProject/home", {
+                .when("/angularProject/home", {
                     templateUrl: "tamplates/main.html",
                     controller: "MainController"
                 })
-             .when("/angulerProject/index", {
+             .when("/angularProject/index", {
                  templateUrl: "tamplates/main.html",
                  controller: "MainController"
              })
-            .when("/angulerProject/", {
+            .when("/angularProject/", {
                 templateUrl: "tamplates/main.html",
                 controller: "MainController"
             })
-                .when("/angulerProject/user/:username", {
+                .when("/angularProject/user/:username", {
                     templateUrl: "tamplates/user.html",
                     controller: "UserController"
                 })
-            .when("/angulerProject/error", {
+            .when("/angularProject/error", {
                 templateUrl: "error.html",
                 controller: "errorController"
             })
