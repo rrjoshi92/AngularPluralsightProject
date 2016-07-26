@@ -7,7 +7,7 @@
         $scope.search = function (username) {
            // if (username) {
                 // github.getuser(username);
-                $location.path("/user/" + username);
+                $location.path("/angularProject/user/" + username);
            // }
            
         }
