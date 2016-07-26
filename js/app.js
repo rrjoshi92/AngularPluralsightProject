@@ -8,19 +8,19 @@
         $locationProvider.html5Mode(true);
         $routeProvider
                 .when("/angularProject/home", {
-                    templateUrl: "tamplates/main.html",
+                    templateUrl: "/angularProject/tamplates/main.html",
                     controller: "MainController"
                 })
              .when("/angularProject/index", {
-                 templateUrl: "tamplates/main.html",
+                 templateUrl: "/angularProject/tamplates/main.html",
                  controller: "MainController"
              })
             .when("/angularProject/", {
-                templateUrl: "tamplates/main.html",
+                templateUrl: "/angularProject/tamplates/main.html",
                 controller: "MainController"
             })
                 .when("/angularProject/user/:username", {
-                    templateUrl: "tamplates/user.html",
+                    templateUrl: "/angularProject/tamplates/user.html",
                     controller: "UserController"
                 })
             .when("/angularProject/error", {
