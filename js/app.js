@@ -24,7 +24,7 @@
                     controller: "UserController"
                 })
             .when("/angularProject/error", {
-                templateUrl: "error.html",
+                templateUrl: "/angularProject/error.html",
                 controller: "errorController"
             })
             
