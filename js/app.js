@@ -15,6 +15,10 @@
                  templateUrl: "/angularProject/tamplates/main.html",
                  controller: "MainController"
              })
+               .when("/angularProject/index.html", {
+                   templateUrl: "/angularProject/tamplates/main.html",
+                   controller: "MainController"
+               })
             .when("/angularProject", {
                 templateUrl: "/angularProject/tamplates/main.html",
                 controller: "MainController"
