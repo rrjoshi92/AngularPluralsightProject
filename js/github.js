@@ -1,6 +1,6 @@
 ﻿(function () {
 
-    var github = function ($http) {
+    var github = function  ($http) {
         var getuser = function (username) {
             return $http.get("https://api.github.com/users/" + username)
                     .then(function (response) {
@@ -16,7 +16,7 @@
         }
         return {
             getuser: getuser,
-             getrepos: getrepos
+            getrepos: getrepos
         };
     };
     var module = angular.module("githubViewer");
