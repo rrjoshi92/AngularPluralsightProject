@@ -7,11 +7,11 @@
     app.config(function ($routeProvider, $locationProvider) {
         $locationProvider.html5Mode(true);
         $routeProvider
-                .when("/angularProject/home", {
+                .when("/angularProject/home/", {
                     templateUrl: "/angularProject/tamplates/main.html",
                     controller: "MainController"
                 })
-             .when("/angularProject/index", {
+             .when("/angularProject/index/", {
                  templateUrl: "/angularProject/tamplates/main.html",
                  controller: "MainController"
              })
