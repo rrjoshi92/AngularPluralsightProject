@@ -8,11 +8,8 @@
            // if (username) {
                 // github.getuser(username);
                 $location.path("/angularProject/user/" + username);
-           // }
-           
-        }
-
-        
+           // }           
+        }        
     };
 
     
