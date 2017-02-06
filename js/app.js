@@ -27,10 +27,16 @@
                     templateUrl: "/angularProject/tamplates/user.html",
                     controller: "UserController"
                 })
+            .when('/angularProject/portfolio', {
+                redirectTo: function() {
+                    window.location = 'http://ravi.dev-tech.club/portfolio/';
+                }
+            })
             .when("/angularProject/error", {
                 templateUrl: "/angularProject/error.html",
                 controller: "errorController"
             })
+
             
         .otherwise({
             redirectTo: "/angularProject/error"
