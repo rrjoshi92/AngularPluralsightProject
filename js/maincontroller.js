@@ -7,7 +7,7 @@
         $scope.search = function (username) {
            // if (username) {
                 // github.getuser(username);
-                $location.path("/angularProject/user/" + username);
+                $location.path("/user/" + username);
            // }           
         }
         $scope.goToPortfolio = function () {

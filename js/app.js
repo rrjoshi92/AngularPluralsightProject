@@ -7,39 +7,39 @@
     app.config(function ($routeProvider, $locationProvider) {
         $locationProvider.html5Mode(true);
         $routeProvider
-                .when("/angularProject/home", {
-                    templateUrl: "/angularProject/tamplates/main.html",
+                .when("/", {
+                    templateUrl: "/tamplates/main.html",
                     controller: "MainController"
                 })
-             .when("/angularProject/index", {
-                 templateUrl: "/angularProject/tamplates/main.html",
+             .when("/index", {
+                 templateUrl: "/tamplates/main.html",
                  controller: "MainController"
              })
-               .when("/angularProject/index.html", {
-                   templateUrl: "/angularProject/tamplates/main.html",
+               .when("/index.html", {
+                   templateUrl: "/tamplates/main.html",
                    controller: "MainController"
                })
-            .when("/angularProject", {
-                templateUrl: "/angularProject/tamplates/main.html",
+            .when("/", {
+                templateUrl: "/tamplates/main.html",
                 controller: "MainController"
             })
-                .when("/angularProject/user/:username", {
-                    templateUrl: "/angularProject/tamplates/user.html",
+                .when("/user/:username", {
+                    templateUrl: "/tamplates/user.html",
                     controller: "UserController"
                 })
-            .when('/angularProject/portfolio', {
+            .when('/portfolio', {
                 redirectTo: function() {
                     window.location = 'http://ravi.dev-tech.club/portfolio/';
                 }
             })
-            .when("/angularProject/error", {
-                templateUrl: "/angularProject/error.html",
+            .when("/error", {
+                templateUrl: "/error.html",
                 controller: "errorController"
             })
 
             
         .otherwise({
-            redirectTo: "/angularProject/error"
+            redirectTo: "/error"
         });
          
     });
